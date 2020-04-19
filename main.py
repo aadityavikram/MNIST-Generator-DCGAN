@@ -3,11 +3,10 @@ import pickle
 import torch.nn as nn
 import torch.optim as optim
 from load_data import load_data
-from mnist_dcgan.utility import plot
 from train import train_gen, train_disc
 from time import time, gmtime, strftime
 from model import Generator, Discriminator
-from utility import create_gif, save_results, save_checkpoint
+from utility import create_gif, save_results, save_checkpoint, plot
 
 
 def train_gan(gen, disc, gen_opt, disc_opt, criterion, device, epoch, train_loader):
